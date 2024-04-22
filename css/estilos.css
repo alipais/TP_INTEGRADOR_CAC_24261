@@ -1,0 +1,135 @@
+
+.body{
+  font-family: Georgia, 'Times New Roman', Times, serif;
+margin: 0;
+}
+
+.header {
+background: rgb(10, 53, 10);
+color: white;
+padding: 2rem 0;
+position: fixed;
+left: 0;
+top: 0;
+right: 0;
+
+}
+.header a {
+color: white;
+text-decoration: none;
+}
+.header-menubar {
+  display: flex;
+  justify-content: space-between; /* Asegura que el logo y el menú estén separados */
+  align-items: center; /* Alinea verticalmente el logo y el menú */
+  
+}
+
+.header-logo img {
+  max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 20px; /* Ajusta el espacio a la derecha del logo */
+ padding: 0.5rem ;
+}
+
+.header-logo img {
+ width: 50px; /* Ajusta este valor al tamaño deseado 
+  height: auto; /* Esto mantiene la proporción del logo */
+ 
+}
+
+ .header-container {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos en el centro */
+  /*justify-content: space-between; /* Asegura que haya espacio entre el logo y el menú */
+}
+
+
+.header-menubar ul {
+ 
+  justify-content: center;
+  list-style: none; /* Elimina los puntos de la lista */
+  padding: 0; /* Elimina el padding por defecto de la lista */
+  margin: 0;
+}
+
+.header-menubar ul li {
+  margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
+  display: inline-block;
+}
+
+.header-menubar ul li a {
+  display: block;
+  padding: 0.5rem 1rem;
+  transition: all 0.4s linear;
+  border-radius: 5px;
+  }
+.header-menubar ul li a:hover {
+  background:#696565 ;
+}
+
+
+.slider-container {
+  display: flex;
+  width: 100%;
+  height: 80vh;
+  overflow-x: scroll;
+  scroll-snap-type: x mandatory;
+  scroll-padding: 0 50%; /* Ajustar este valor según sea necesario */
+  -webkit-overflow-scrolling: touch;
+  }
+
+  .slider-container img {
+    flex: 0 0 100%;
+    width: 100%;
+    object-fit: cover;
+    scroll-snap-align: center;
+  }
+    
+.main {
+  padding-top: 12rem;
+}
+
+@media only screen and (max-width:767px) {
+  
+  .header-menubar {
+    width: 100%;
+    margin: 1rem;
+  }
+  .header-menubar ul {
+    display: block;
+  }
+  .header-menubar ul li {
+    margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
+    display: block;
+  }
+  
+  .header-menubar ul li a {
+    display: block;
+    padding: 0.5rem 0;
+    transition: all 0.4s linear;
+    border-radius: 5px;
+    }
+  .header-menubar ul li a:hover {
+    background:#696565 ;
+  }
+  
+}
+
+  /*footer*/
+  .footer {
+    background: rgb(63, 138, 63);
+    padding: 4rem 0;
+    margin-top: 6rem ;
+  }
+  .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Define dos columnas de igual tamaño */
+    gap: 20px; /* Espacio entre las columnas */
+   }
+   .aside {
+    grid-area: 1 / 1 / 2 / 2; /* Ocupa la primera fila y la primera columna */
+   }
+   
+   .seguinos {
+    grid-area: 1 / 2 / 2 / 3; /* Ocupa la primera fila y la segunda columna */
+   }
