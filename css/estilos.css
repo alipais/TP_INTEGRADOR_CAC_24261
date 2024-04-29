@@ -5,6 +5,7 @@ margin: 0;
 }
 
 .header {
+  
 background: rgb(10, 53, 10);
 color: white;
 padding: 2rem 0;
@@ -45,7 +46,7 @@ text-decoration: none;
 
 
 .header-menubar ul {
- 
+ display: block;
   justify-content: center;
   list-style: none; /* Elimina los puntos de la lista */
   padding: 0; /* Elimina el padding por defecto de la lista */
@@ -70,12 +71,14 @@ text-decoration: none;
 
 .slider-container {
   display: flex;
-  width: 100%;
+  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
   height: 80vh;
-  overflow-x: scroll;
-  scroll-snap-type: x mandatory;
+  overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
+  /*scroll-snap-type: x mandatory;
   scroll-padding: 0 50%; /* Ajustar este valor según sea necesario */
-  -webkit-overflow-scrolling: touch;
+  /*-webkit-overflow-scrolling: touch;*/
+  position: relative;
+
   }
 
   .slider-container img {
@@ -84,10 +87,37 @@ text-decoration: none;
     object-fit: cover;
     scroll-snap-align: center;
   }
-    
+  .slider-item {
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
+    height: 300px; /* Asegúrate de que las imágenes tengan la misma altura que el contenedor */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1s;
+   }
+   
+   
+.slider-item:first-child {
+  opacity: 1; }
 .main {
   padding-top: 12rem;
 }
+
+/* Estilos para el icono de menú */
+.hamburger {
+  display: none; /* Oculta el icono por defecto */
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 2rem;
+ }
+ 
+ .hamburger-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  margin: 5px auto;
+ }
 
 @media only screen and (max-width:767px) {
   
@@ -96,16 +126,21 @@ text-decoration: none;
     margin: 1rem;
   }
   .header-menubar ul {
-    display: block;
+    display: none; /* Oculta el menú por defecto */
+    list-style-type: none;
+    padding: 0;
   }
   .header-menubar ul li {
     margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
-    display: block;
+    display: block; /* Muestra cada elemento del menú en una línea */
   }
+  .hamburger {
+    display: block; /* Muestra el icono de menú en pantallas pequeñas */
+ }
   
   .header-menubar ul li a {
     display: block;
-    padding: 0.5rem 0;
+    padding: 0.2rem 0;
     transition: all 0.4s linear;
     border-radius: 5px;
     }
@@ -113,12 +148,26 @@ text-decoration: none;
     background:#696565 ;
   }
   
+  @media (min-width: 600px) {
+    .slider-item {
+       width: 50%; /* Ajusta el tamaño de las imágenes en pantallas más grandes */
+    }
+   }
+   
+   @media (min-width: 992px) {
+    .slider-item {
+       width: 33.33%; /* Ajusta el tamaño de las imágenes en pantallas de escritorio */
+    }
+   }
+   
+
+  
 }
 
   /*footer*/
   .footer {
     background: rgb(63, 138, 63);
-    padding: 4rem 0;
+    padding: 4rem 1rem;
     margin-top: 6rem ;
   }
   .container {
@@ -132,4 +181,6 @@ text-decoration: none;
    
    .seguinos {
     grid-area: 1 / 2 / 2 / 3; /* Ocupa la primera fila y la segunda columna */
-   }
+    justify-self: end; /* Alinea el contenido al final de la columna */ 
+    margin-right: 20px; /* Añade un margen derecho */
+  }
