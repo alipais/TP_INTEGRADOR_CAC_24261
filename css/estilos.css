@@ -69,16 +69,11 @@ text-decoration: none;
 }
 
 
-.slider-container {
-  display: flex;
+.slider-container {  
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  height: 100vh; /* Cambia el height para que ocupe toda la pantalla */
+  height: 100vh;/* ocupa toda la pantalla */
   overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
-  /*scroll-snap-type: x mandatory;
-  scroll-padding: 0 50%; /* Ajustar este valor según sea necesario */
-  /*-webkit-overflow-scrolling: touch;*/
   position: relative; /* Cambia la posición a relativa */
-
   }
 
   .slider-container img {
@@ -88,8 +83,7 @@ text-decoration: none;
   }
 
   .slider-item {
-    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
-    height: 100%; /* Ajusta la altura de las imágenes al div */
+    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */    
     height: 100vh;
     position: absolute;
     opacity: 0;
@@ -99,9 +93,47 @@ text-decoration: none;
    
 .slider-item:first-child {
   opacity: 1; }
+
 .main {
   padding-top: 12rem;
 }
+
+/*estilos para el texto de bienvenida*/
+
+.slider-text {
+  position: absolute;
+  top: 18%;/*centra verticalmente*/
+  left: 20%; /*centra horizontalmente*/
+  transform: translate(-50%, -50%);
+  color: rgb(13, 12, 12);
+  font-size: 3em;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+  background-color: rgba(255, 255, 255, 0.5); /* Fondo blanco semi-transparente */
+  padding: 80px; /* Añade espacio alrededor del texto */
+  border-radius: 10px; /* Añade esquinas redondeadas al fondo */
+  display: flex;
+  justify-content: center;  
+  flex-direction: column; /* Coloca el botón debajo del texto */
+  align-items: center; /* Centra horizontalmente el contenido del fondo */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para resaltar el fondo */
+}
+
+.boton-enlace {
+  margin-top: 20px; /* Espacio entre el texto y el botón */
+  background-color: #4CAF50; /* Color de fondo del botón */
+  color: white; /* Color de texto del botón */
+  border: none; /* Quita el borde del botón */
+  padding: 10px 20px; /* Espaciado interno del botón */
+  text-align: center; /* Centra el texto del botón */
+  text-decoration: none; /* Quita la decoración de texto */
+  display: inline-block; /* Muestra el botón como un elemento en línea */
+  font-size: 16px; /* Tamaño de fuente del botón */
+  border-radius: 5px; /* Añade esquinas redondeadas al botón */
+ 
+}
+
 
 /* Estilos para el icono de menú */
 .hamburger {
