@@ -5,7 +5,7 @@ margin: 0;
 }
 
 .header {
-  
+z-index: 1000; /* Asegura que el menú esté por encima del contenido */ 
 background: rgb(10, 53, 10);
 color: white;
 padding: 2rem 0;
@@ -72,24 +72,25 @@ text-decoration: none;
 .slider-container {
   display: flex;
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  height: 80vh;
+  height: 100vh; /* Cambia el height para que ocupe toda la pantalla */
   overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
   /*scroll-snap-type: x mandatory;
   scroll-padding: 0 50%; /* Ajustar este valor según sea necesario */
   /*-webkit-overflow-scrolling: touch;*/
-  position: relative;
+  position: relative; /* Cambia la posición a relativa */
 
   }
 
   .slider-container img {
-    flex: 0 0 100%;
-    width: 100%;
+    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+    height: 100vh;
     object-fit: cover;
-    scroll-snap-align: center;
   }
+
   .slider-item {
     width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */
-    height: 300px; /* Asegúrate de que las imágenes tengan la misma altura que el contenedor */
+    height: 100%; /* Ajusta la altura de las imágenes al div */
+    height: 100vh;
     position: absolute;
     opacity: 0;
     transition: opacity 1s;
@@ -119,6 +120,50 @@ text-decoration: none;
   margin: 5px auto;
  }
 
+ .categoria {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  max-width: 1200px; /* Establece un ancho máximo para el contenedor */
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+  padding: 20px;
+  box-sizing: border-box;
+}
+.tarjeta {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.tarjeta img {
+  width: 100%;
+  max-width: 200px; /* Establece el ancho máximo de las imágenes */
+  height: auto;
+  border-radius: 5px;
+}
+
+.categoria img {
+  width: 100%;
+    max-width: 200px; /* Establece el ancho máximo de las imágenes */
+    height: auto;
+    border-radius: 5px;
+}
+
+h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 1.5em;
+}
+
+h3 {
+  margin-top: 0;
+  font-size: 1.2em;
+}
+
+
+
+
 @media only screen and (max-width:767px) {
   
   .header-menubar {
@@ -147,6 +192,9 @@ text-decoration: none;
   .header-menubar ul li a:hover {
     background:#696565 ;
   }
+
+
+  
   
   @media (min-width: 600px) {
     .slider-item {
