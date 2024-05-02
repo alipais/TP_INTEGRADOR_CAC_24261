@@ -6,7 +6,7 @@
     <link rel="icon" type="image/x-icon" href="./imagenes/tierno3.jpg "> 
     <link rel="stylesheet" href="./css/estilos.css">
     <script src="https://kit.fontawesome.com/e19815398f.js" crossorigin="anonymous"></script>
-    <title>Petshop</title>
+    <title>Pet Paradise</title>
 </head>
 <body>    
     <header class="header">         
@@ -32,6 +32,10 @@
      </header>
      <main class="main">
         <div class="contenido-ppl">
+            <div>
+                <h1 class="h-title">Pet  Paradise</h1> <!-- Nombre de la tienda --> 
+            </div> 
+
              <section class="secciones">
                       <div class="slider-container">
                         <img class="slider-item" src="./imagenes/anoir-chafik.jpg" />
@@ -117,14 +121,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
     <script>
-      document.getElementById('menu-toggle').addEventListener('click', function() {
+           document.getElementById('menu-toggle').addEventListener('click', function() {
     var menu = document.querySelector('.header-menubar ul');
-    if (menu.style.display === 'none' || window.getComputedStyle(menu).display === 'none') {
-        menu.style.display = 'block';
-    } else {
-        menu.style.display = 'none';
-    }
+    menu.classList.toggle('menu-abierto');
 });
+
 
 window.addEventListener('resize', function() {
     var menu = document.querySelector('.header-menubar ul');

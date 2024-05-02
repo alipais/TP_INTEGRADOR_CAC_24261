@@ -33,8 +33,8 @@ text-decoration: none;
 }
 
 .header-logo img {
- width: 50px; /* Ajusta este valor al tamaño deseado 
-  height: auto; /* Esto mantiene la proporción del logo */
+ width: 50px; /* Ajusta este valor al tamaño deseado */
+height: auto; /* Esto mantiene la proporción del logo */
  
 }
 
@@ -67,6 +67,19 @@ text-decoration: none;
 .header-menubar ul li a:hover {
   background:#696565 ;
 }
+
+.h-title {
+  font-size: 5vw; /* Tamaño de fuente relativo al ancho del viewport */
+  font-weight: bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #0d0b0b; /* Color del texto */
+  text-align: center; /* Alineación centrada del texto */
+  padding: 20px 0; /* Espaciado interno arriba y abajo del nombre */
+  position: relative; /* Posición relativa para permitir ajustar la posición */
+  margin-top: -95px; /* Ajusta el margen superior según sea necesario */
+  margin-bottom: -20px;
+}
+
 
 
 .slider-container {  
@@ -106,7 +119,7 @@ text-decoration: none;
   left: 20%; /*centra horizontalmente*/
   transform: translate(-50%, -50%);
   color: rgb(13, 12, 12);
-  font-size: 3em;
+  font-size: 3vw; /* Tamaño de fuente relativo al ancho del viewport */
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
   z-index: 1; /* Asegura que el texto esté por encima de la imagen */
@@ -206,7 +219,17 @@ h3 {
     display: none; /* Oculta el menú por defecto */
     list-style-type: none;
     padding: 0;
+    margin-right: 0; /* Elimina el margen derecho del menú */
   }
+  .header-logo {
+    margin-right: 0; /* Elimina el margen derecho del logo */
+  }
+  .header-logo a {
+    display: inline-block; /* Permite que el logo y el título estén en la misma línea */
+    vertical-align: middle; /* Alinea verticalmente el texto con el logo */
+    margin-right: 10px; /* Añade un pequeño margen entre el logo y el título */
+  }
+
   .header-menubar ul li {
     margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
     display: block; /* Muestra cada elemento del menú en una línea */
@@ -214,6 +237,10 @@ h3 {
   .hamburger {
     display: block; /* Muestra el icono de menú en pantallas pequeñas */
  }
+    /* Mostrar el menú cuando tenga la clase 'menu-abierto' */
+  .header-menubar ul.menu-abierto {
+      display: block !important; /* Usamos !important para asegurarnos de que este estilo tenga prioridad */
+    }
   
   .header-menubar ul li a {
     display: block;
@@ -224,24 +251,44 @@ h3 {
   .header-menubar ul li a:hover {
     background:#696565 ;
   }
+  .slider-item {
+    width: 100%; /* Ajusta el ancho al 100% para pantallas pequeñas */
+}
+.h-title {
+  font-size: 3em; /* Tamaño de fuente para pantallas pequeñas */
+  margin-top: 0; /* Elimina el margen superior */
+}
+.slider-text {
+  font-size: 6vw; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+}
 
 
   
   
-  @media (min-width: 600px) {
+@media (min-width: 768px) and (max-width: 991px) {
     .slider-item {
        width: 50%; /* Ajusta el tamaño de las imágenes en pantallas más grandes */
     }
+    .h-title {
+      font-size: 2.5em; /* Tamaño de fuente para pantallas medianas */
+    }
+    .slider-text {
+      font-size: 5vw; /* Ajusta el tamaño de fuente para pantallas medianas */
+  }
+ 
    }
    
    @media (min-width: 992px) {
     .slider-item {
        width: 33.33%; /* Ajusta el tamaño de las imágenes en pantallas de escritorio */
     }
-   }
-   
-
-  
+    .h-title {
+      font-size: 3em; /* Tamaño de fuente para pantallas grandes */
+    }
+    .slider-text {
+      font-size: 3vw; /* Ajusta el tamaño de fuente para pantallas grandes */
+  }
+   }  
 }
 
   /*footer*/
