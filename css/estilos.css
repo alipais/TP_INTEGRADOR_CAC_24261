@@ -2,6 +2,7 @@
 .body{
   font-family: Georgia, 'Times New Roman', Times, serif;
 margin: 0;
+background-color: azure;
 }
 
 .header {
@@ -15,6 +16,7 @@ top: 0;
 right: 0;
 
 }
+
 .header a {
 color: white;
 text-decoration: none;
@@ -22,28 +24,25 @@ text-decoration: none;
 .header-menubar {
   display: flex;
   justify-content: space-between; /* Asegura que el logo y el menú estén separados */
-  align-items: center; /* Alinea verticalmente el logo y el menú */
-  
+  align-items: center; /* Alinea verticalmente el logo y el menú */ 
 }
 
 .header-logo img {
   max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
   margin-right: 20px; /* Ajusta el espacio a la derecha del logo */
  padding: 0.5rem ;
+ border-radius: 20px;
 }
 
 .header-logo img {
  width: 50px; /* Ajusta este valor al tamaño deseado */
-height: auto; /* Esto mantiene la proporción del logo */
- 
+height: auto; /* Esto mantiene la proporción del logo */ 
 }
 
  .header-container {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos en el centro */
-  /*justify-content: space-between; /* Asegura que haya espacio entre el logo y el menú */
+  align-items: center; /* Alinea verticalmente los elementos en el centro */  
 }
-
 
 .header-menubar ul {
  display: block;
@@ -76,28 +75,27 @@ height: auto; /* Esto mantiene la proporción del logo */
   text-align: center; /* Alineación centrada del texto */
   padding: 20px 0; /* Espaciado interno arriba y abajo del nombre */
   position: relative; /* Posición relativa para permitir ajustar la posición */
-  margin-top: -95px; /* Ajusta el margen superior según sea necesario */
+  margin-top: -85px; /* Ajusta el margen superior según sea necesario */
   margin-bottom: -20px;
 }
 
 
-
 .slider-container {  
   width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  height: 100vh;/* ocupa toda la pantalla */
+  height: 80vh;/* ocupa toda la pantalla */
   overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
   position: relative; /* Cambia la posición a relativa */
   }
 
   .slider-container img {
     width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 100vh;
+    height: 80vh;
     object-fit: cover;
   }
 
   .slider-item {
     width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */    
-    height: 100vh;
+    height: 80vh;
     position: absolute;
     opacity: 0;
     transition: opacity 1s;
@@ -164,7 +162,27 @@ height: auto; /* Esto mantiene la proporción del logo */
   background-color: white;
   margin: 5px auto;
  }
+/*Estilos para la categoria*/
 
+.categoria-article h2 {
+  margin-top: 1.2em;  
+  font-size: 1.5em;
+  background-color: #4CAF50;
+  padding: 10px 0 10px 10px;
+  margin-left: -20px; /* Ajusta el margen izquierdo para compensar el padding */
+  margin-right: -20px; /* Ajusta el margen derecho para compensar el padding */
+}
+
+.categoria-article:first-child {
+  margin-top: 0; /* Elimina el margen superior del primer artículo */
+} 
+.categoria-article {
+  display:inline;
+  max-width: 800px; /* Establece el ancho máximo para el artículo */
+  margin: 0 auto; /* Centra el artículo horizontalmente  */
+  padding: 0 20px; /* Añade un relleno a los lados del artículo */
+  text-align: center; /* Centra el texto horizontalmente */  
+}
  .categoria {
   display: flex;
   flex-wrap: wrap;
@@ -174,41 +192,28 @@ height: auto; /* Esto mantiene la proporción del logo */
   padding: 20px;
   box-sizing: border-box;
 }
+
+.tarjeta h3 {
+  margin: 0;
+   text-align: center;
+   font-size: 1em;  
+ }
 .tarjeta {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
   padding: 10px;
-  background-color: #fff;
+  background-color: white;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
 }
+
 .tarjeta img {
   width: 100%;
-  max-width: 200px; /* Establece el ancho máximo de las imágenes */
+  max-width: 150px; /* Establece el ancho máximo de las imágenes */
   height: auto;
   border-radius: 5px;
 }
 
-.categoria img {
-  width: 100%;
-    max-width: 200px; /* Establece el ancho máximo de las imágenes */
-    height: auto;
-    border-radius: 5px;
-}
-
-h2 {
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-size: 1.5em;
-}
-
-h3 {
-  margin-top: 0;
-  font-size: 1.2em;
-}
-
-
-
-
+/*responsive*/
 @media only screen and (max-width:767px) {
   
   .header-menubar {
@@ -287,6 +292,10 @@ h3 {
     }
     .slider-text {
       font-size: 3vw; /* Ajusta el tamaño de fuente para pantallas grandes */
+  }
+  .categoria-article {
+    display: flex;
+    justify-content: space-around;
   }
    }  
 }
