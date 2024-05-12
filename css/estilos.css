@@ -1,116 +1,219 @@
-
 .body{
   font-family: Georgia, 'Times New Roman', Times, serif;
-margin: 0;
+margin:0;
 background-color: azure;
 }
 
-.header {
+header {
 z-index: 1000; /* Asegura que el menú esté por encima del contenido */ 
 background: rgb(10, 53, 10);
 color: white;
-padding: 2rem 0;
+padding: 10px 0;
 position: fixed;
 left: 0;
 top: 0;
 right: 0;
-
 }
 
-.header a {
-color: white;
-text-decoration: none;
-}
-.header-menubar {
+.header-container {
   display: flex;
-  justify-content: space-between; /* Asegura que el logo y el menú estén separados */
-  align-items: center; /* Alinea verticalmente el logo y el menú */ 
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;/*esto*/
 }
 
-.header-logo img {
-  max-width: 100px; /* Ajusta el tamaño del logo según sea necesario */
-  margin-right: 20px; /* Ajusta el espacio a la derecha del logo */
- padding: 0.5rem ;
- border-radius: 20px;
+ /* Estilos para el soporte al cliente */
+.customer-support {
+  display: flex;    
+  align-items: center; /* Alinea los elementos al centro */    
 }
-
-.header-logo img {
- width: 50px; /* Ajusta este valor al tamaño deseado */
-height: auto; /* Esto mantiene la proporción del logo */ 
+/* Estilos para el icono */
+.customer-support i {
+  margin-right: 5px; /* Añade un pequeño margen a la derecha del icono */
+  max-width: 50px;
+  padding: 5px;
 }
-
- .header-container {
+/* Estilos para el texto de soporte */
+.support-text {
   display: flex;
-  align-items: center; /* Alinea verticalmente los elementos en el centro */  
+  flex-direction: column; /* Cambia la dirección del flexbox a columna */
+  padding: 10px;
+}
+/* Estilos para el número de contacto */
+.customer-support .number {
+  margin-top: 5px; /* Añade un margen superior al número */
+}
+/* Estilos para el logo y el nombre de la tienda */
+.logo {
+  display: flex;
+  align-items: center; /* Alinea verticalmente los elementos */
 }
 
-.header-menubar ul {
- display: block;
-  justify-content: center;
-  list-style: none; /* Elimina los puntos de la lista */
-  padding: 0; /* Elimina el padding por defecto de la lista */
+/* Estilos para la imagen del logo */
+.logo img {
+  max-width: 40px; /* Ajusta el tamaño del logo según sea necesario */
+  margin-right: 10px; /* Ajusta el espacio a la derecha del logo */
+  padding: 0.5rem;
+  border-radius: 20px;
+  height: auto;/*esti*/
+  
+}
+/* Estilos para el nombre de la tienda */
+.logo p {
+  margin: 0; /* Elimina el margen por defecto */
+  font-size: 2.5rem;
+
+}
+/* Estilos para el carrito de compras */
+.shopping-cart img {
+  max-width: 50px; /* Ajusta el tamaño de la imagen del carrito según sea necesario */
+  margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
+  height: auto;/*esti*/
+}
+
+/*estilos para el menu*/
+.navbar {
+  background-color: #343a40;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar input {
+  padding: 5px;
+  margin-right: 10px;
+}
+
+.search-bar button {
+  padding: 5px 10px;
+  background-color: #232527;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+/* Estilos para el contenedor del menú */
+.menu-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;    
+  color: white; /* Color del texto */
+}
+
+/* Estilos para el botón de menú (hamburguesa) */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 30px;
+  height: 30px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+}
+
+/* Estilos para las líneas del botón de menú (hamburguesa) */
+.hamburger-line {
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+/* Estilos para la lista de menú */
+.menu-cerrado {
+  list-style-type: none;
+  padding: 0;
   margin: 0;
+  display: flex;
 }
 
-.header-menubar ul li {
-  margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
-  display: inline-block;
+/* Estilos para los elementos de la lista de menú */
+.menu-cerrado li {
+  margin-right: 20px;
 }
 
-.header-menubar ul li a {
-  display: block;
-  padding: 0.5rem 1rem;
-  transition: all 0.4s linear;
-  border-radius: 5px;
-  }
-.header-menubar ul li a:hover {
-  background:#696565 ;
-}
-
-.h-title {
-  font-size: 5vw; /* Tamaño de fuente relativo al ancho del viewport */
+/* Estilos para los enlaces de la lista de menú */
+.menu-cerrado a {
+  text-decoration: none;
+  color: white;
   font-weight: bold;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: #0d0b0b; /* Color del texto */
-  text-align: center; /* Alineación centrada del texto */
-  padding: 20px 0; /* Espaciado interno arriba y abajo del nombre */
-  position: relative; /* Posición relativa para permitir ajustar la posición */
-  margin-top: -85px; /* Ajusta el margen superior según sea necesario */
-  margin-bottom: -20px;
+  padding: 5px;
+  border-radius: 5px;       
+  transition: all 0.4s linear;
 }
 
+/* Cambiar color de enlace al pasar el mouse */
+.menu-cerrado a:hover {
+  background:#696565 ;/* Color de resaltado */   
+}
 
+/* Estilos para la lista de menú desplegado */
+.menu-abierto {
+  display: block !important;
+  flex-direction: column;
+  background-color: #343a40; /* Color de fondo */
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+}
+
+/* Estilos para los elementos de la lista de menú desplegado */
+.menu-abierto li {
+  margin: 10px;
+}
+
+/* Estilos para los enlaces de la lista de menú desplegado */
+.menu-abierto a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/*seccion del slider de imagenes*/
+.secciones h2 {
+  display: none;
+}
 .slider-container {  
-  width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-  height: 80vh;/* ocupa toda la pantalla */
-  overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
-  position: relative; /* Cambia la posición a relativa */
-  }
-
-  .slider-container img {
-    width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-    height: 80vh;
-    object-fit: cover;
-  }
-
-  .slider-item {
-    width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */    
-    height: 80vh;
-    position: absolute;
-    opacity: 0;
-    transition: opacity 1s;
-   }
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 80vh;/* ocupa toda la pantalla */
+    overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
+    position: relative; /* Cambia la posición a relativa */
+    }
    
-   
-.slider-item:first-child {
-  opacity: 1; }
-
-.main {
-  padding-top: 12rem;
-}
+  
+    .slider-container img {
+      width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
+      height: 80vh;
+      object-fit: cover;
+    }
+  
+    .slider-item {
+      width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */    
+      height: 80vh;
+      position: absolute;
+      opacity: 0;
+      transition: opacity 1s;
+     }
+     
+     
+  .slider-item:first-child {
+    opacity: 1; }
+  
+  .main {
+    padding-top: 10rem;
+  }
 
 /*estilos para el texto de bienvenida*/
-
+  
 .slider-text {
   position: absolute;
   top: 18%;/*centra verticalmente*/
@@ -145,24 +248,10 @@ height: auto; /* Esto mantiene la proporción del logo */
  
 }
 
-
-/* Estilos para el icono de menú */
-.hamburger {
-  display: none; /* Oculta el icono por defecto */
-  cursor: pointer;
-  background: none;
-  border: none;
-  padding: 2rem;
- }
- 
- .hamburger-line {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 5px auto;
- }
 /*Estilos para la categoria*/
+section h3{
+  display: none;
+}
 
 .categoria-article h2 {
   margin-top: 1.2em;  
@@ -177,7 +266,7 @@ height: auto; /* Esto mantiene la proporción del logo */
   margin-top: 0; /* Elimina el margen superior del primer artículo */
 } 
 .categoria-article {
-  display:inline;
+  display:inline;  
   max-width: 800px; /* Establece el ancho máximo para el artículo */
   margin: 0 auto; /* Centra el artículo horizontalmente  */
   padding: 0 20px; /* Añade un relleno a los lados del artículo */
@@ -204,6 +293,11 @@ height: auto; /* Esto mantiene la proporción del logo */
   background-color: white;
   border-radius: 5px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
+  /*esto agregue*/
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px; /* Establece una altura fija para las tarjetas */
 }
 
 .tarjeta img {
@@ -213,70 +307,183 @@ height: auto; /* Esto mantiene la proporción del logo */
   border-radius: 5px;
 }
 
-/*responsive*/
+/**************FOOTER***********/
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: auto; /* Agregar margen superior */
+}
+
+.contact-info, .follow-us {
+  flex: 1;
+  text-align: center;
+}
+
+.contact-info h3, .follow-us h3 {
+  margin-bottom: 10px;
+}
+
+.contact-info ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.contact-info ul li {
+  margin-bottom: 5px;
+}
+
+.follow-us ul {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.follow-us ul li {
+  margin-right: 10px;
+}
+
+.follow-us ul li:last-child {
+  margin-right: 0;
+}
+
+.social-icons a {
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
+.social-icons .fab.fa-facebook-f {
+  color: #3b5998; /* Color de Facebook */
+}
+
+.social-icons .fab.fa-twitter {
+  color: #1da1f2; /* Color de Twitter */
+}
+
+.social-icons .fab.fa-instagram {
+  color: #e4405f; /* Color de Instagram */
+}
+
+/***************RESPONSIVE******************/
 @media only screen and (max-width:767px) {
+
   
-  .header-menubar {
+  .header-container {
+   flex-direction: column; /* Cambia la dirección del flexbox a columna */
+    padding: 10px; /* Reduce el padding para dispositivos móviles */
+}
+
+.customer-support {
+    margin-bottom: 10px; /* Agrega margen inferior al bloque de soporte al cliente */
+}
+
+.logo {
+    margin-top: 10px; /* Agrega margen superior al bloque del logo */
+}
+   
+  
+    .header-logo {
+        margin-right: 0; /* Elimina el margen derecho del logo */
+      }
+      .header-logo a {
+        display: inline-block; /* Permite que el logo y el título estén en la misma línea */
+        vertical-align: middle; /* Alinea verticalmente el texto con el logo */
+        margin-right: 10px; /* Añade un pequeño margen entre el logo y el título */
+      }
+    
+  
+  .menu-container {
     width: 100%;
     margin: 1rem;
+  }   
+  .hamburger{
+    display: flex;
   }
-  .header-menubar ul {
-    display: none; /* Oculta el menú por defecto */
+  .navbar ul {    
     list-style-type: none;
     padding: 0;
     margin-right: 0; /* Elimina el margen derecho del menú */
   }
-  .header-logo {
-    margin-right: 0; /* Elimina el margen derecho del logo */
-  }
-  .header-logo a {
-    display: inline-block; /* Permite que el logo y el título estén en la misma línea */
-    vertical-align: middle; /* Alinea verticalmente el texto con el logo */
-    margin-right: 10px; /* Añade un pequeño margen entre el logo y el título */
-  }
 
-  .header-menubar ul li {
+
+  .navbar ul li {
     margin-right: 20px; /* Añade un margen a la derecha de cada elemento de la lista para separarlos */
-    display: block; /* Muestra cada elemento del menú en una línea */
-  }
-  .hamburger {
-    display: block; /* Muestra el icono de menú en pantallas pequeñas */
- }
-    /* Mostrar el menú cuando tenga la clase 'menu-abierto' */
-  .header-menubar ul.menu-abierto {
-      display: block !important; /* Usamos !important para asegurarnos de que este estilo tenga prioridad */
-    }
-  
-  .header-menubar ul li a {
+    display: block; /* Muestra cada elemento del menú en una línea} */
+  }    
+     
+  .navbar ul li a {
     display: block;
     padding: 0.2rem 0;
     transition: all 0.4s linear;
     border-radius: 5px;
     }
-  .header-menubar ul li a:hover {
+  .navbar ul li a:hover {
     background:#696565 ;
   }
-  .slider-item {
+  
+  .menu-cerrado {
+    display: none; /* Ocultar el menú cerrado en pantallas pequeñas */
+}
+.menu-abierto {
+    display: flex; /* Mostrar el menú desplegado en pantallas pequeñas */
+    flex-direction: column; /* Alinear los elementos en columna */
+    background-color: #343a40; /* Color de fondo */
+    padding: 10px; /* Espaciado interno */
+    position: absolute; /* Posición absoluta */
+    top: 100%; /* Alinear al final del botón de hamburguesa */
+    left: 0;
+    right: 0;
+    z-index: 1; /* Capa más alta para que esté por encima del contenido */
+}
+.slider-container {
+   width: 110%; /* Ajustar el ancho del slider al 100% */
+    }
+
+   .slider-item {
     width: 100%; /* Ajusta el ancho al 100% para pantallas pequeñas */
 }
-.h-title {
-  font-size: 3em; /* Tamaño de fuente para pantallas pequeñas */
-  margin-top: 0; /* Elimina el margen superior */
-}
-.slider-text {
-  font-size: 6vw; /* Ajusta el tamaño de fuente para pantallas pequeñas */
+
+.slider-text {  
+  top: 48%; /* Cambia la posición vertical */
+  left: 25%; /* Cambia la posición horizontal */
+  transform: translate(-50%, -50%);
+  font-size: 5vw; /* Cambia el tamaño de fuente relativo al ancho del viewport */
+  padding: 40px; /* Cambia el espacio alrededor del texto */
 }
 
+.menu-footer {
+  grid-template-columns: repeat(2, 1fr);/*cada fila tendrá dos columnas de igual tamaño*/
+}
+.footer {
+  grid-template-columns: 1fr; /* Cambia a una sola columna en dispositivos móviles */
+}
+.seguinos {
+  justify-self: start; /* Alinea el contenido a la izquierda en dispositivos móviles */
+  margin-right: 0; /* Elimina el margen derecho en dispositivos móviles */
+  margin-top: 20px; /* Añade un margen superior en dispositivos móviles */
+}  
 
-  
-  
 @media (min-width: 768px) and (max-width: 991px) {
+
+     /* Ocultar el menú desplegado en pantallas medianas */
+     .menu-abierto {
+        display: none;
+    }
+    button.hamburger {
+        display: none !important;
+   }
     .slider-item {
        width: 50%; /* Ajusta el tamaño de las imágenes en pantallas más grandes */
     }
-    .h-title {
-      font-size: 2.5em; /* Tamaño de fuente para pantallas medianas */
-    }
+    
     .slider-text {
       font-size: 5vw; /* Ajusta el tamaño de fuente para pantallas medianas */
   }
@@ -284,12 +491,12 @@ height: auto; /* Esto mantiene la proporción del logo */
    }
    
    @media (min-width: 992px) {
+
+   
     .slider-item {
        width: 33.33%; /* Ajusta el tamaño de las imágenes en pantallas de escritorio */
     }
-    .h-title {
-      font-size: 3em; /* Tamaño de fuente para pantallas grandes */
-    }
+    
     .slider-text {
       font-size: 3vw; /* Ajusta el tamaño de fuente para pantallas grandes */
   }
@@ -298,25 +505,4 @@ height: auto; /* Esto mantiene la proporción del logo */
     justify-content: space-around;
   }
    }  
-}
-
-  /*footer*/
-  .footer {
-    background: rgb(63, 138, 63);
-    padding: 4rem 1rem;
-    margin-top: 6rem ;
-  }
-  .container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Define dos columnas de igual tamaño */
-    gap: 20px; /* Espacio entre las columnas */
-   }
-   .aside {
-    grid-area: 1 / 1 / 2 / 2; /* Ocupa la primera fila y la primera columna */
-   }
-   
-   .seguinos {
-    grid-area: 1 / 2 / 2 / 3; /* Ocupa la primera fila y la segunda columna */
-    justify-self: end; /* Alinea el contenido al final de la columna */ 
-    margin-right: 20px; /* Añade un margen derecho */
   }
