@@ -222,6 +222,10 @@
   }
   
   /*estilos para el texto de bienvenida*/
+  .slider-text p {
+    margin: 0; /* Eliminar el margen predeterminado de los párrafos */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
   
   .slider-text {
     position: absolute;

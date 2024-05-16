@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html >
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,16 +16,16 @@
             <div class="customer-support">
                 <i class="fa-solid fa-headset" aria-hidden="true"></i>
                 <div class="support-text">
-                    <span class="text">Soporte al cliente</span>
-                    <span class="number">123-456-7890</span>
+                    <p class="text">Soporte al cliente</p>
+                    <p class="number">123-456-7890</p>
                 </div>
             </div>
             <div class="logo">
-                <a href="index.html"><img src="./imagenes/logo2.jpg" alt="Logo de Pet Paradise"></a>
+                <a href="index.html"><img src="./imagenes/logo2.jpg" alt=""></a>
                 <p>Pet Paradise</p>
             </div>
             <div class="shopping-cart">
-                <img src="./imagenes/cart.png" alt="Icono de Carrito de compras">
+                <img src="./imagenes/cart.png" alt="">
             </div>
         </div>
         <nav class="navbar">
@@ -37,15 +37,17 @@
                 </button>
                 <ul id="menu-desplegado" class="menu-cerrado" aria-hidden="true">
                     <li><a href="index.html">Inicio</a></li>
-                    <li><a href="nosotros.html">Nosotros</a></li>
-                    <li><a href="productos.html">Productos</a></li>
-                    <li><a href="shop.html">Shop</a></li>
-                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="./paginas/nosotros.html">Nosotros</a></li>
+                    <li><a href="./paginas/productos.html">Productos</a></li>
+                    <li><a href="./paginas/shop.html">Shop</a></li>
+                    <li><a href="./paginas/contacto.html">Contacto</a></li>
                 </ul>
             </div>
             <div class="search-bar">
-                <input type="text" placeholder="Buscar...">
+                <form id="search-bar">
+                <input type="text" id="search-input" placeholder="Buscar...">
                 <button type="submit">Buscar</button>
+                </form>
             </div>
         </nav>
         </header>
@@ -55,12 +57,14 @@
             <section class="secciones">
                 <h2>slider de imagenes</h2>
                 <div class="slider-container">
-                    <img class="slider-item" src="./imagenes/anoir-chafik.jpg" alt="imagenes de perros" />
-                    <div class="slider-text"><span style="letter-spacing:normal;">Bienvenidos<br> a la tienda<br> de
-                            mascotas<br>
-                            <button class="boton-enlace" id="ir-a-tienda" onclick="irATienda()">Ir a la tienda</button></span></div>
-                    <img class="slider-item" src="./imagenes/gatitos.jpg" alt="imagenes de gatitos"/>
-                    <img class="slider-item" src="./imagenes/gato1.jpg" alt="imagen gato blanco"/>
+                    <img class="slider-item" src="./imagenes/anoir-chafik.jpg" alt="perros">
+                    <div class="slider-text">
+                        <p>Bienvenidos</p>
+                        <p>a la tienda</p>
+                        <p>de mascotas</p>
+                            <button class="boton-enlace" id="ir-a-tienda" onclick="irATienda()">Ir a la tienda</button></div>
+                    <img class="slider-item" src="./imagenes/gatitos.jpg" alt="gatitos">
+                    <img class="slider-item" src="./imagenes/gato1.jpg" alt="gato blanco">
                 </div>
             </section>
     
@@ -70,31 +74,31 @@
                     <h2> Productos mas Vendidos</h2>
                     <div class="categoria">
                         <div class="tarjeta">
-                            <img src="./imagenes/alimento.jpeg" alt="Alimentos">
+                            <img src="./imagenes/alimento.jpeg" alt="alimento perro mimaskot adultos 25kg">
                             <h3>Mimaskot adultos</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/alimento2.jpeg" alt="Alimentos">
+                            <img src="./imagenes/alimento2.jpeg" alt="alimento dog chow adultos 3kg">
                             <h3>Dog chow Adultos</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/alimento3.jpeg" alt="Alimentos">
+                            <img src="./imagenes/alimento3.jpeg" alt="alimento dogui cachorros 1kg">
                             <h3>Dogui Cachorros</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/Proplan-adulto.png" alt="Alimentos">
+                            <img src="./imagenes/Proplan-adulto.png" alt="proplan adulto">
                             <h3>Proplan
                                 Gatos
                             </h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/Purina_adultos.png" alt="Alimentos">
+                            <img src="./imagenes/Purina_adultos.png" alt="purina adultos">
                             <h3>Purina
                                 adulto
                             </h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/Dental_care.png" alt="Alimentos">
+                            <img src="./imagenes/Dental_care.png" alt="dental care">
                             <h3>Dental Care</h3>
                         </div>
                     </div>
@@ -106,7 +110,7 @@
                     <h2>Las mascotas eligen</h2>
                     <div class="categoria">
                         <div class="tarjeta">
-                            <img src="./imagenes/ratita_sonido.png" alt="Rata con sonido">
+                            <img src="./imagenes/ratita_sonido.png" alt="juguete Rata">
                             <h3>Rata chifle</h3>
                         </div>
                         <div class="tarjeta">
@@ -114,11 +118,11 @@
                             <h3>Litera sanitaria</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/collarNro3.png" alt="Collar">
+                            <img src="./imagenes/collarNro3.png" alt="Collares para gatos">
                             <h3>Collares</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/pelota.png" alt="Pelota">
+                            <img src="./imagenes/pelota.png" alt="Pelota numero 5">
                             <h3>Pelota Maciza Nro5</h3>
                         </div>
                         <div class="tarjeta">
@@ -138,27 +142,27 @@
                     <h2>Ropa para Mascotas</h2>
                     <div class="categoria">
                         <div class="tarjeta">
-                            <img src="./imagenes/vestido1.jpeg" alt="vestido gato">
+                            <img src="./imagenes/vestido1.jpeg" alt="vestido azul con moño para gato">
                             <h3>Vestidos Gatos</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/vestido.jpeg" alt="vestido perros">
+                            <img src="./imagenes/vestido.jpeg" alt="vestido rosa para caniches">
                             <h3>Vestidos perros</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/conjunto_rosa.jpeg" alt="conjunto rosa">
+                            <img src="./imagenes/conjunto_rosa.jpeg" alt="conjunto rosa para pequeños animale">
                             <h3>Conjunto rosa</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/ropa1.jpeg" alt="chaleco">
+                            <img src="./imagenes/ropa1.jpeg" alt="chaleco a rayas para pequeños animales">
                             <h3>Chaleco</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/vestido_gato.jpeg" alt="Vestido gatos">
+                            <img src="./imagenes/vestido_gato.jpeg" alt="Vestido a lunares para gatos">
                             <h3>Vestido Gato</h3>
                         </div>
                         <div class="tarjeta">
-                            <img src="./imagenes/mantaGato.webp" alt="Manta para gatos">
+                            <img src="./imagenes/mantaGato.webp" alt="Manta amarilla para gatos">
                             <h3>Mantas para gatos</h3>
                         </div>
                     </div>
@@ -166,6 +170,7 @@
             </section>      
     
         </main>
+    
     
         <footer>
             <div class="contact-info">
@@ -185,9 +190,7 @@
                 </ul>
             </div>
         </footer>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>   
-        <script src="script.js"></script>
-    
+       
+        <script src="./script/script.js"></script>    
     </body>
-    
-    </html>
+</html>
