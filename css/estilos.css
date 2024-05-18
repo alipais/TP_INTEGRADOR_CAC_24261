@@ -1,3 +1,6 @@
+*{
+  box-sizing: border-box;
+}
 .body{
   font-family: Georgia, 'Times New Roman', Times, serif;
   margin:0;
@@ -58,7 +61,7 @@
     margin-right: 10px; /* Ajusta el espacio a la derecha del logo */
     padding: 0.5rem;
     border-radius: 20px;
-    height: auto;/*esti*/
+    height: auto;/**/
     
   }
   /* Estilos para el nombre de la tienda */
@@ -189,25 +192,31 @@
   
   /*seccion del slider de imagenes*/
   .secciones h2 {
-  display: none;
+   display: none;
   }
   .slider-container {  
     width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
-    height: 80vh;/* ocupa toda la pantalla */
+    padding-bottom: 40%; 
+    padding-top: 20%;
     overflow: hidden; /* Evita que las imágenes se desborden del contenedor */
     position: relative; /* Cambia la posición a relativa */
-    }
+    display: flex; /* Para centrar las imágenes */
+    align-items: center; /* Centra las imágenes verticalmente */
+    justify-content: center; /* Centra las imágenes horizontalmente */
+  }
    
   
     .slider-container img {
       width: 100%; /* Ajusta el ancho de la imagen al 100% del contenedor */
-      height: 80vh;
-      object-fit: cover;
+      height: auto; /* Ajusta la altura al  contenedor */
+      object-fit: contain; /* Cubre el contenedor manteniendo la proporción */
+      object-position: center; /* Centra la imagen verticalmente */
+      
     }
   
     .slider-item {
       width: 100%; /* Asegura que las imágenes ocupen todo el ancho del contenedor */    
-      height: 80vh;
+      height: 100%;
       position: absolute;
       opacity: 0;
       transition: opacity 1s;
@@ -218,7 +227,7 @@
     opacity: 1; }
   
   .main {
-    padding-top: 10rem;
+    padding-top: 13rem; /* Ajusta este valor según la altura de tu menú */
   }
   
   /*estilos para el texto de bienvenida*/
@@ -455,11 +464,11 @@
     z-index: 1; /* Capa más alta para que esté por encima del contenido */
   }
   .slider-container {
-   width: 110%; /* Ajustar el ancho del slider al 100% */
-    }
-  
-   .slider-item {
-    width: 100%; /* Ajusta el ancho al 100% para pantallas pequeñas */
+    height: calc(100vh - 16rem); /* Ajusta la altura para pantallas pequeñas */
+    
+  }
+  .main {
+    padding-top: 23rem; /* Ajusta este valor según la altura de tu menú */
   }
   
   .slider-text {  
@@ -491,9 +500,12 @@
     button.hamburger {
         display: none !important;
    }
-    .slider-item {
-       width: 50%; /* Ajusta el tamaño de las imágenes en pantallas más grandes */
-    }
+   .slider-container {
+    height: 100vh; /* Ajusta la altura para pantallas medianas */
+}
+.main {
+  padding-top: 7rem; /* Ajusta este valor según la altura de tu menú */
+}
     
     .slider-text {
       font-size: 5vw; /* Ajusta el tamaño de fuente para pantallas medianas */
@@ -502,11 +514,12 @@
    }
    
    @media (min-width: 992px) {
-  
-   
-    .slider-item {
-       width: 33.33%; /* Ajusta el tamaño de las imágenes en pantallas de escritorio */
-    }
+    .slider-container {
+      height: 50vh; /* Ajusta la altura para pantallas grandes */
+  }   
+  .main {
+    padding-top: 8rem; /* Ajusta este valor según la altura de tu menú */
+  } 
     
     .slider-text {
       font-size: 3vw; /* Ajusta el tamaño de fuente para pantallas grandes */
