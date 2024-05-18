@@ -472,11 +472,9 @@
   }
   
   .slider-text {  
-  top: 25%; /* Cambia la posición vertical */
-  left: 15%; /* Cambia la posición horizontal */
-  transform: translate(-50%, -50%);
-  font-size: 5vw; /* Cambia el tamaño de fuente relativo al ancho del viewport */
-  padding: 40px; /* Cambia el espacio alrededor del texto */
+  
+  font-size: 3vw; /* Cambia el tamaño de fuente relativo al ancho del viewport */
+
   }
   
   .menu-footer {
@@ -508,7 +506,7 @@
 }
     
     .slider-text {
-      font-size: 5vw; /* Ajusta el tamaño de fuente para pantallas medianas */
+      font-size: 4vw; /* Ajusta el tamaño de fuente para pantallas medianas */
   }
   
    }
