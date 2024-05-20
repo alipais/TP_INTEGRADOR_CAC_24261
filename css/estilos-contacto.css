@@ -26,10 +26,6 @@ body {
     font-size: 3em;
 }
 
-.logo span {
-    color: rgb(14, 73, 14);
-}
-
 .contact-wrapper {
     box-shadow: 0 0 20px 0 rgba(255, 255, 255, .3);
 }
