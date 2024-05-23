@@ -1,29 +1,29 @@
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     // Función para el menú desplegable
     var menuToggle = document.getElementById("menu-toggle");
     var menuList = document.querySelector(".menu-cerrado");
 
     if (menuToggle && menuList) {
-        menuToggle.addEventListener("click", function () {
+        menuToggle.addEventListener("click", function() {
             menuList.classList.toggle("menu-abierto");
         });
 
-        document.addEventListener("click", function (event) {
+        document.addEventListener("click", function(event) {
             const target = event.target;
             if (!menuList.contains(target) && !menuToggle.contains(target)) {
                 menuList.classList.remove("menu-abierto");
             }
         });
 
-        window.addEventListener("resize", function () {
+        window.addEventListener("resize", function() {
             // Cerrar el menú desplegable al cambiar el tamaño de la ventana
             menuList.classList.remove("menu-abierto");
         });
 
         // Manejar el submenú
         var submenuToggles = document.querySelectorAll(".submenu-toggle");
-        submenuToggles.forEach(function (submenuToggle) {
-            submenuToggle.addEventListener("click", function (event) {
+        submenuToggles.forEach(function(submenuToggle) {
+            submenuToggle.addEventListener("click", function(event) {
                 event.preventDefault(); // Prevenir el comportamiento por defecto del enlace
                 var submenu = this.nextElementSibling;
                 submenu.classList.toggle("submenu-abierto");
@@ -31,9 +31,9 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         // Cerrar el submenú al hacer clic fuera
-        document.addEventListener("click", function (event) {
+        document.addEventListener("click", function(event) {
             const target = event.target;
-            submenuToggles.forEach(function (submenuToggle) {
+            submenuToggles.forEach(function(submenuToggle) {
                 var submenu = submenuToggle.nextElementSibling;
                 if (submenu && !submenuToggle.contains(target) && !submenu.contains(target)) {
                     submenu.classList.remove("submenu-abierto");
@@ -41,10 +41,10 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         });
 
-        window.addEventListener("resize", function () {
+        window.addEventListener("resize", function() {
             // Cerrar los submenús al cambiar el tamaño de la ventana
             var submenus = document.querySelectorAll(".submenu");
-            submenus.forEach(function (submenu) {
+            submenus.forEach(function(submenu) {
                 submenu.classList.remove("submenu-abierto");
             });
         });
@@ -69,6 +69,12 @@ document.addEventListener("DOMContentLoaded", function () {
         console.warn('No se encontraron elementos con la clase .slider-item');
     }
 });
+
+// Función para redirigir a la página correspondiente
+function irAPagina(pagina) {
+    console.log("Navegando a la página: " + pagina);
+    window.location.href = '../paginas/' + pagina +'.html';
+}
 
 // Función para redirigir a shop.html
 function irATienda() {

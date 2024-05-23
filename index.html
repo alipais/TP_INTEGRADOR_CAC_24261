@@ -1,141 +1,146 @@
-<!DOCTYPE html >
+<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" type="image/x-icon" href="./imagenes/icono.png">
+    <link rel="icon" type="image/x-icon" href="./imagenes/icono.png ">
 
     <link rel="stylesheet" href="./css/estilos.css">
     <script src="https://kit.fontawesome.com/e19815398f.js" crossorigin="anonymous"></script>
     <title>Pet Paradise</title>
-    
+
 </head>
+
 <body>
-    <div id="header-placeholder"></div>    
-   
-        <main class="main">
-            <section class="secciones">
-                <h2>slider de imagenes</h2>
-                <div class="slider-container">
-                    <img class="slider-item" src="./imagenes/anoir-chafik-2.jpg" alt="perros">
-                    <div class="slider-text">
-                        <p>Bienvenidos</p>
-                        <p>a la tienda</p>
-                        <p>de mascotas</p>
-                            <button class="boton-enlace" id="ir-a-tienda" onclick="irATienda()">Ir a la tienda</button></div>
-                    <img class="slider-item" src="./imagenes/cesta2.jpg" alt="gatitos">
-                    <img class="slider-item" src="./imagenes/kate-2.jpg" alt="gato blanco">
+    <div id="header-placeholder"></div>   
+            
+    <main class="main">
+        <section class="secciones">
+            <h2>slider de imagenes</h2>
+            <div class="slider-container">
+                <img class="slider-item" src="./imagenes/anoir-chafik-2.jpg" alt="perros">
+                <div class="slider-text">
+                    <p>Bienvenidos</p>
+                    <p>a la tienda</p>
+                    <p>de mascotas</p>
+                    <button class="boton-enlace" id="ir-a-tienda" onclick="irATienda()">Ir a la tienda</button>
                 </div>
-            </section>
-    
-            <section>
-                <h4 style="display: none;">Categorias de productos</h4>
-                <article class="categoria-article">
-                    <h2> Productos mas Vendidos</h2>
-                    <div class="categoria">
-                        <div class="tarjeta">
-                            <img src="./imagenes/alimento.jpeg" alt="alimento perro mimaskot adultos 25kg">
-                            <h3>Mimaskot adultos</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/alimento2.jpeg" alt="alimento dog chow adultos 3kg">
-                            <h3>Dog chow Adultos</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/alimento3.jpeg" alt="alimento dogui cachorros 1kg">
-                            <h3>Dogui Cachorros</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/Proplan-adulto.png" alt="proplan adulto">
-                            <h3>Proplan
-                                Gatos
-                            </h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/Purina_adultos.png" alt="purina adultos">
-                            <h3>Purina
-                                adulto
-                            </h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/Dental_care.png" alt="dental care">
-                            <h3>Dental Care</h3>
-                        </div>
+                <img class="slider-item" src="./imagenes/cesta2.jpg" alt="gatitos">
+                <img class="slider-item" src="./imagenes/kate-2.jpg" alt="gato blanco">
+            </div>
+        </section>
+
+        <section>
+            <h4 style="display: none;">Categorias de productos</h4>
+            <article class="categoria-article">
+                <h2> Productos mas Vendidos</h2>
+                <div class="categoria">
+                    <div class="tarjeta">
+                        <img src="./imagenes/alimento.jpeg" alt="Alimentos">
+                        <h3>Mimaskot adultos</h3>
                     </div>
-                </article>
-            </section>
-            <section>
-                <h4 style="display: none;">Categorias de productos</h4>
-                <article class="categoria-article">
-                    <h2>Las mascotas eligen</h2>
-                    <div class="categoria">
-                        <div class="tarjeta">
-                            <img src="./imagenes/ratita_sonido.png" alt="juguete Rata">
-                            <h3>Rata chifle</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/Litera_sanitaria.png" alt="Litera sanitaria">
-                            <h3>Litera sanitaria</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/collarNro3.png" alt="Collares para gatos">
-                            <h3>Collares</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/pelota.png" alt="Pelota numero 5">
-                            <h3>Pelota Maciza Nro5</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/collar_gato.png" alt="collar para gato">
-                            <h3>Collar para gatos</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/arneCorrea.jpeg" alt="Arne para perros">
-                            <h3>Arne correa</h3>
-                        </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/alimento2.jpeg" alt="Alimentos">
+                        <h3>Dog chow Adultos</h3>
                     </div>
-                </article>
-            </section>
-            <section>
-                <h4 style="display: none;">Categorias de productos</h4>
-                <article class="categoria-article">
-                    <h2>El look perfecto para tus Adorables Compañeros</h2>
-                    <div class="categoria">
-                        <div class="tarjeta">
-                            <img src="./imagenes/vestido1.jpeg" alt="vestido azul con moño para gato">
-                            <h3>Vestidos Gatos</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/vestido.jpeg" alt="vestido rosa para caniches">
-                            <h3>Vestidos perros</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/conjunto_rosa.jpeg" alt="conjunto rosa para pequeños animale">
-                            <h3>Conjunto rosa</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/ropa1.jpeg" alt="chaleco a rayas para pequeños animales">
-                            <h3>Chaleco</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/vestido_gato.jpeg" alt="Vestido a lunares para gatos">
-                            <h3>Vestido Gato</h3>
-                        </div>
-                        <div class="tarjeta">
-                            <img src="./imagenes/mantaGato.webp" alt="Manta amarilla para gatos">
-                            <h3>Mantas para gatos</h3>
-                        </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/alimento3.jpeg" alt="Alimentos">
+                        <h3>Dogui Cachorros</h3>
                     </div>
-                </article>
-            </section>      
-    
-        </main>
-    
-    
-        <div id="footer-placeholder"></div>
-       
-        <script src="./script/script.js"></script>  
-        <script src="./script/header.js"></script>   
-        <script src="./script/footer.js"></script> 
-    </body>
+                    <div class="tarjeta">
+                        <img src="./imagenes/Proplan-adulto.png" alt="Alimentos">
+                        <h3>Proplan
+                            Gatos
+                        </h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/Purina_adultos.png" alt="Alimentos">
+                        <h3>Purina
+                            adulto
+                        </h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/Dental_care.png" alt="Alimentos">
+                        <h3>Dental Care</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h4 style="display: none;">Categorias de productos</h4>
+            <article class="categoria-article">
+                <h2>Las mascotas eligen</h2>
+                <div class="categoria">
+                    <div class="tarjeta">
+                        <img src="./imagenes/ratita_sonido.png" alt="Rata con sonido">
+                        <h3>Rata chifle</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/Litera_sanitaria.png" alt="Litera sanitaria">
+                        <h3>Litera sanitaria</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/collarNro3.png" alt="Collar">
+                        <h3>Collares</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/pelota.png" alt="Pelota">
+                        <h3>Pelota Maciza Nro5</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/collar_gato.png" alt="collar para gato">
+                        <h3>Collar para gatos</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/arneCorrea.jpeg" alt="Arne para perros">
+                        <h3>Arne correa</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+        <section>
+            <h4 style="display: none;">Categorias de productos</h4>
+            <article class="categoria-article">
+                <h2>El looks perfecto  para tus Adorables Compañero</h2>
+                <div class="categoria">
+                    <div class="tarjeta">
+                        <img src="./imagenes/vestido1.jpeg" alt="vestido gato">
+                        <h3>Vestidos Gatos</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/vestido.jpeg" alt="vestido perros">
+                        <h3>Vestidos perros</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/conjunto_rosa.jpeg" alt="conjunto rosa">
+                        <h3>Conjunto rosa</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/ropa1.jpeg" alt="chaleco">
+                        <h3>Chaleco</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/vestido_gato.jpeg" alt="Vestido gatos">
+                        <h3>Vestido Gato</h3>
+                    </div>
+                    <div class="tarjeta">
+                        <img src="./imagenes/mantaGato.webp" alt="Manta para gatos">
+                        <h3>Mantas para gatos</h3>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+    </main>
+    <!-- Aquí se mostrarán los resultados de la búsqueda -->
+    <div id="results-container"></div>
+ 
+    <div id="footer-placeholder"></div>
+
+    <script src="./script/script.js"></script>    
+    <script src="./script/header.js"></script>
+    <script src="./script/footer.js"></script>
+</body>
+
 </html>
