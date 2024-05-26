@@ -72,15 +72,15 @@
   }
   /* Estilos para el carrito de compras */
   .shopping-cart img {
-    max-width: 50px; /* Ajusta el tamaño de la imagen del carrito según sea necesario */
-    margin-right: 10px; /* Ajusta el margen derecho según sea necesario */
-    height: auto;/*esti*/
+    max-width: 50px; /* Ajusta el tamaño de la imagen del carrito*/
+    margin-right: 10px; /* Ajusta el margen derecho */
+    height: auto;
   }
   
   /*estilos para el menu*/
   
   nav.navbar {
-    margin-bottom: 20px; /* Ajusta según sea necesario */
+    margin-bottom: 20px; 
   }
   
   .navbar {
@@ -264,12 +264,12 @@
     opacity: 1; }
   
   .main {
-    padding-top: 13rem; /* Ajusta este valor según la altura de tu menú */
+    padding-top: 13rem; /* Ajusta el valor según la altura del menú */
   }
   
   /*estilos para el texto de bienvenida*/
   .slider-text p {
-    margin: 0; /* Eliminar el margen predeterminado de los párrafos */
+    margin: 0; /* Elimina el margen predeterminado de los párrafos */
     line-height: 1.5; /* Espaciado entre líneas */
 }
   
@@ -348,8 +348,7 @@
   padding: 10px;
   background-color: white;
   border-radius: 5px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);  
-  /*esto agregue*/
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);    
   display: flex;
   flex-direction: column;
   justify-content: space-between;
