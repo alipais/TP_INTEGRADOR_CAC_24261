@@ -1,0 +1,51 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: #181818;
+    color: #fff;
+    line-height: 1.6;
+    font-family: 'Quicksand', sans-serif;
+    padding: 0 1.5em;
+}
+
+.nosh1
+    {
+        font-weight: bold;
+        font-size: 50px;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+    
+    }
+
+.nosh4
+    {
+        font-weight: bold;
+        font-size: 20px;
+        text-align: center;
+        margin: 20px;
+        padding: 20px;
+        font-family:Arial, Helvetica, sans-serif;
+        text-decoration: none;
+        margin-top: 200px;
+    }
+
+
+
+/* LARGE SIZE */
+@media(min-width: 700px) {
+    body {
+        padding: 0 4em;
+    }
+    .contact-wrapper {
+        display: grid;
+    }
+    .contact-wrapper > * {
+        padding: 2em;
+        margin:auto;
+    }
+}

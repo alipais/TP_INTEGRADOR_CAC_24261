@@ -1,0 +1,99 @@
+/* Estilos globales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total de los elementos */
+}
+
+.img_fondo
+{
+    margin: 0;
+    padding: 0;
+    background: url(image.jpg);   
+    background-size: cover;
+    background-position: center;
+    font-family: sans-serif;
+    background-image: url(../imagenes/fondopag.jpg);
+}
+ h1{
+    padding: 20px 20px 50px 20px;
+
+
+}
+
+/* Estilos del cuerpo de la página */
+body {
+    margin: 0 auto; /* Centra el contenido de la página */
+    max-width: 100%; /* Establece un ancho máximo para el contenido */
+    padding: 20px;
+    color: #333; /* Define el color del texto */
+
+}
+
+/* Estilos generales para las imágenes */
+img {
+    max-width: 100%; /* Asegura que las imágenes no excedan el ancho de su contenedor */
+    height: auto; /* Mantiene la proporción de las imágenes */
+}
+
+/* Contenedor principal de los elementos de la tienda */
+.container-items {
+    display: grid; /* Utiliza un modelo de rejilla para organizar los elementos */
+    grid-template-columns: repeat(3, 1fr); /* Define tres columnas de igual tamaño */
+    gap: 20px; /* Añade espacio entre los elementos */
+}
+
+/* Estilo para cada elemento del contenedor de productos */
+.item {
+    border-radius: 10px; /* Redondea las esquinas del elemento */
+}
+
+/* Efecto al pasar el cursor sobre un elemento del producto */
+.item:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20); /* Añade una sombra alrededor del elemento */
+}
+
+/* Estilo para las imágenes dentro de cada elemento del producto */
+.item img {
+    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
+    height: 300px; /* Define una altura fija para la imagen */
+    object-fit: contain; /* Escala la imagen para que quepa dentro del contenedor sin recortarse */
+    border-radius: 10px 10px 0 0; /* Redondea las esquinas superiores de la imagen */
+    transition: all .5s; /* Añade una transición suave a todas las propiedades cambiantes */
+}
+
+/* Contenedor de la imagen del producto */
+.item figure {
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
+/* Efecto al pasar el cursor sobre la imagen del producto */
+.item:hover img {
+    transform: scale(1.05); /* Escala la imagen un 5% */
+}
+
+/* Contenedor de la información del producto */
+.info-product {
+    padding: 15px 30px; /* Añade espacio interno alrededor del contenido */
+    line-height: 2; /* Define la altura de línea */
+    display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos hijos */
+    flex-direction: column; /* Alinea los elementos hijos en una columna */
+    gap: 10px; /* Añade espacio entre los elementos hijos */
+    color: #fff;
+}
+
+/* Estilo para el precio del producto */
+.price {
+    font-size: 18px; /* Define el tamaño de la fuente */
+    font-weight: 900; /* Define el grosor de la fuente */
+}
+
+/* Estilo para el botón de añadir al carrito */
+.info-product button {
+    border: none; /* Elimina el borde del botón */
+    background: none; /* Elimina el fondo predeterminado del botón */
+    background-color: #000; /* Define el color de fondo del botón */
+    color: #fff; /* Define el color del texto del botón */
+    padding: 15px 10px; /* Añade espacio interno alrededor del contenido del botón */
+    cursor: pointer; /* Cambia el cursor a un puntero cuando pasa sobre el botón */
+}
