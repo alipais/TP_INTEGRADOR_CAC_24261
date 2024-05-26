@@ -6,7 +6,7 @@
 }
 
  h1{
-    padding: 20px 20px 50px 20px;
+    padding: 20px;
     color: #fff;
 
 
@@ -30,13 +30,18 @@ img {
 /* Contenedor principal de los elementos de la tienda */
 .container-items {
     display: grid; /* Utiliza un modelo de rejilla para organizar los elementos */
-    grid-template-columns: repeat(3, 1fr); /* Define tres columnas de igual tamaño */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; /* Añade espacio entre los elementos */
 }
 
 /* Estilo para cada elemento del contenedor de productos */
 .item {
     border-radius: 10px; /* Redondea las esquinas del elemento */
+    overflow: hidden; /* Evita que el contenido desborde */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra los elementos verticalmente */
+
 }
 
 /* Efecto al pasar el cursor sobre un elemento del producto */
@@ -46,11 +51,11 @@ img {
 
 /* Estilo para las imágenes dentro de cada elemento del producto */
 .item img {
-    width: 100%; /* Asegura que la imagen ocupe el 100% del ancho del contenedor */
-    height: 300px; /* Define una altura fija para la imagen */
-    object-fit: contain; /* Escala la imagen para que quepa dentro del contenedor sin recortarse */
-    border-radius: 10px 10px 0 0; /* Redondea las esquinas superiores de la imagen */
-    transition: all .5s; /* Añade una transición suave a todas las propiedades cambiantes */
+    width: 100%;
+    height: 200px;
+    object-fit: cover; 
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.5s; /* Solo animar la transformación */
 }
 
 /* Contenedor de la imagen del producto */
@@ -65,11 +70,11 @@ img {
 
 /* Contenedor de la información del producto */
 .info-product {
-    padding: 15px 30px; /* Añade espacio interno alrededor del contenido */
+    padding: 15px; /* Añade espacio interno alrededor del contenido */
     line-height: 2; /* Define la altura de línea */
-    display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos hijos */
-    flex-direction: column; /* Alinea los elementos hijos en una columna */
-    gap: 10px; /* Añade espacio entre los elementos hijos */
+    /*display: flex; /* Utiliza el modelo de caja flexible para alinear los elementos hijos */
+    /*flex-direction: column; /* Alinea los elementos hijos en una columna */
+    /*gap: 10px; /* Añade espacio entre los elementos hijos */
     color: #fff;
 }
 
@@ -87,4 +92,16 @@ img {
     color: #fff; /* Define el color del texto del botón */
     padding: 15px 10px; /* Añade espacio interno alrededor del contenido del botón */
     cursor: pointer; /* Cambia el cursor a un puntero cuando pasa sobre el botón */
+}
+/* Media query para pantallas más pequeñas */
+@media screen and (max-width: 768px) {
+    .container-items {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    }
+}
+/* Media query para pantallas muy pequeñas */
+@media screen and (max-width: 480px) {
+    .container-items {
+        grid-template-columns: 1fr;
+    }
 }
