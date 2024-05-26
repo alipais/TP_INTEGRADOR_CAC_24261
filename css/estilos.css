@@ -7,6 +7,9 @@
   background-color: azure;
   
   }
+  main {
+    background-color: #0e1911;
+  }
   
   header {
   z-index: 1000; /* Asegura que el menú esté por encima del contenido */ 
