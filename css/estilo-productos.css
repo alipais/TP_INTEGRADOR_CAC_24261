@@ -5,16 +5,6 @@
     box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho y alto total de los elementos */
 }
 
-.img_fondo
-{
-    margin: 0;
-    padding: 0;
-    background: url(image.jpg);   
-    background-size: cover;
-    background-position: center;
-    font-family: sans-serif;
-    background-image: url(../imagenes/fondopag.jpg);
-}
  h1{
     padding: 20px 20px 50px 20px;
 
@@ -27,6 +17,7 @@ body {
     max-width: 100%; /* Establece un ancho máximo para el contenido */
     padding: 20px;
     color: #333; /* Define el color del texto */
+    background-color:#181818;
 
 }
 
