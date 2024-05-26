@@ -1,8 +1,8 @@
-# Proyecto EdTech (*frontend*)
+# Proyecto Tienda para Mascotas (*frontend*)
 Sitio desarrollado para la primera parte del curso «Python Fullstack» del programa **Codo a Codo**.
 
 ## Acerca del proyecto
-Desarrollo de una plataforma 
+Desarrollo de una plataforma para la oferta de productos para mascotas , promoción de productos.
 
 ## Maquetación básica
 ![Maqueta del sitio](./imagenes/boceto.jpg)
